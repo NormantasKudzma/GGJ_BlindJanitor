@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MonsterAi\Stealth.cs">
+    <Files>
+      <File FileName="Assets\PlayerController.cs" Line="13" Column="18" />
+      <File FileName="Assets\MonsterAi\Stealth.cs" Line="64" Column="3" />
+      <File FileName="Assets\MonsterAi\Simple.cs" Line="65" Column="3" />
+      <File FileName="Assets\MonsterAi\Base.cs" Line="61" Column="15" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
