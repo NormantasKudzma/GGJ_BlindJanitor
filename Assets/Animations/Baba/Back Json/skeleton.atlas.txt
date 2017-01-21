@@ -4,65 +4,51 @@ size: 1024,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-images/Body
-  rotate: false
-  xy: 598, 317
-  size: 408, 348
-  orig: 413, 348
-  offset: 5, 0
-  index: -1
-images/Brow
+images/Arm
   rotate: true
-  xy: 745, 4
-  size: 156, 100
-  orig: 156, 100
+  xy: 563, 121
+  size: 214, 198
+  orig: 214, 198
   offset: 0, 0
   index: -1
-images/Eyes
-  rotate: false
-  xy: 677, 667
-  size: 316, 138
-  orig: 316, 138
+images/Body
+  rotate: true
+  xy: 2, 6
+  size: 408, 348
+  orig: 416, 348
   offset: 0, 0
   index: -1
 images/Head
-  rotate: true
-  xy: 2, 6
+  rotate: false
+  xy: 2, 416
   size: 659, 594
   orig: 659, 594
   offset: 0, 0
   index: -1
 images/Leg
-  rotate: false
-  xy: 847, 13
+  rotate: true
+  xy: 563, 2
   size: 117, 147
   orig: 117, 147
   offset: 0, 0
   index: -1
 images/Stick
-  rotate: true
-  xy: 677, 807
+  rotate: false
+  xy: 352, 78
   size: 209, 336
   orig: 209, 336
   offset: 0, 0
   index: -1
-images/StickTop
-  rotate: false
-  xy: 598, 2
-  size: 145, 313
-  orig: 209, 336
-  offset: 64, 0
-  index: -1
 images/fx1
   rotate: true
-  xy: 745, 162
+  xy: 763, 182
   size: 153, 247
   orig: 153, 247
   offset: 0, 0
   index: -1
 images/fx2
-  rotate: false
-  xy: 2, 707
+  rotate: true
+  xy: 663, 337
   size: 673, 309
   orig: 673, 309
   offset: 0, 0
@@ -73,13 +59,6 @@ size: 1024,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-images/Arm
-  rotate: false
-  xy: 573, 40
-  size: 214, 198
-  orig: 214, 198
-  offset: 0, 0
-  index: -1
 images/fx3
   rotate: false
   xy: 2, 2
