@@ -45,7 +45,6 @@ public class AnimationHelper : MonoBehaviour
 	public void PlayAnimation(string anim)
 	{
 		if (anim != m_CurrentAnim) {
-			Debug.Log (m_AnimationScript == null ? "NULL" : "not null");
 			m_AnimationScript.AnimationName = anim;
 			m_CurrentAnim = anim;
 		}

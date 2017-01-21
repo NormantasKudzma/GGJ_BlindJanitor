@@ -139,6 +139,15 @@ public class Stealth : Base
 		}
 	}
 
+	void OnTriggerStay(Collider col)
+	{
+		if (col.CompareTag("Player")
+			&& m_State == State.STATE_HUNTING) 
+		{
+			m_Agent.SetDestination(m_Player.transform.position);
+		}
+	}
+
 	protected override void StartHunting(Vector3 target)
 	{
 		if (m_State != State.STATE_PREPARE
@@ -186,7 +195,7 @@ public class Stealth : Base
 		float movedDist = Vector3.Distance(m_PreparedPos, m_Player.transform.position);
 		Debug.Log("User moved " + movedDist);
 
-		if (movedDist < m_MinCancelAttackDist) {
+		//if (movedDist < m_MinCancelAttackDist) {
 			Debug.Log("Lazy user");
 
 			m_MaxMovementTime = m_MaxHuntingTime;
@@ -198,11 +207,11 @@ public class Stealth : Base
 			m_Agent.stoppingDistance = m_HuntingStoppingDist;
 
 			m_Agent.SetDestination(m_Player.transform.position);
-		} 
+		/*} 
 		else 
 		{
 			m_State = State.STATE_IDLE;
-		}
+		}*/
 	}
 
 	void BlinkEyes()
