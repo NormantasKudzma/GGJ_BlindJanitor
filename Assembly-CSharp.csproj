@@ -176,12 +176,15 @@
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\SkeletonTint.shader" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpritesUnlit.shader" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Shaders\Bones.shader" />
+     <None Include="Assets\Animations\Baba\Side Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpritesVertexLit.shader" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Ghost\Shaders\SkeletonGhost.shader" />
+     <None Include="Assets\Animations\Baba\Back Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Dragon\dragon.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\SkeletonGraphic\Shaders\SkeletonGraphic.shader" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Shaders\Skeleton.shader" />
      <None Include="Assets\Animations\spineboy\spineboy.atlas.txt" />
+     <None Include="Assets\Animations\Baba\Front Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Spineunitygirl\Doi.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\SkeletonRenderSeparator\SkeletonRenderSeparator.txt" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpriteDepthNormalsTexture.shader" />

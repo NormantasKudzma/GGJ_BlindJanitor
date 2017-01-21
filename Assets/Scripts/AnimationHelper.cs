@@ -6,6 +6,14 @@ using Spine.Unity;
 
 public class AnimationHelper : MonoBehaviour
 {
+	public enum Direction
+	{
+		RIGHT = 0,
+		UP = 1,
+		LEFT = 2,
+		DOWN = 3,
+	}
+
 	public SkeletonDataAsset m_UpSkeleton;
 	public SkeletonDataAsset m_DownSkeleton;
 	public SkeletonDataAsset m_RightSkeleton;
@@ -35,6 +43,12 @@ public class AnimationHelper : MonoBehaviour
 		/*for (float i = 0; i <= 360; i += 15) {
 			SetSkeletonByAngle (i);
 		}*/
+
+		/*SetSkeletonByDirection (Direction.RIGHT);
+		SetSkeletonByDirection (Direction.UP);
+		SetSkeletonByDirection (Direction.LEFT);
+		SetSkeletonByDirection (Direction.DOWN);*/
+
 	}
 
 	void Update()
@@ -48,6 +62,11 @@ public class AnimationHelper : MonoBehaviour
 			m_AnimationScript.AnimationName = anim;
 			m_CurrentAnim = anim;
 		}
+	}
+
+	public void SetSkeletonByDirection(Direction d)
+	{
+		SetSkeletonByAngle((int)d * 91.0f);
 	}
 
 	public void SetSkeletonByAngle(float angle)
