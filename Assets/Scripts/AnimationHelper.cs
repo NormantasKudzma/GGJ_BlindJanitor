@@ -14,7 +14,7 @@ public class AnimationHelper : MonoBehaviour
 	float m_NormalScale;
 	SkeletonAnimation m_AnimationScript;
 	string m_CurrentAnim;
-	GameObject m_Parent;
+	Transform m_Parent;
 
 	SkeletonDataAsset[] m_SkeletonArray;
 
@@ -24,15 +24,22 @@ public class AnimationHelper : MonoBehaviour
 
 		m_CurrentAnim = "Idle";
 		m_CurrentDir = 0;
-		m_SkeletonArray = new SkeletonDataAsset[]{ m_RightSkeleton, m_UpSkeleton, m_RightSkeleton, m_DownSkeleton };
+		m_SkeletonArray = new SkeletonDataAsset[]{ m_RightSkeleton, m_DownSkeleton , m_RightSkeleton, m_UpSkeleton };
 
 		m_NormalScale = transform.localScale.x;
-		m_Parent = transform.parent.gameObject;
+		m_Parent = transform.parent.gameObject.transform;
+
+		// cia testas 
+
+
+		/*for (float i = 0; i <= 360; i += 15) {
+			SetSkeletonByAngle (i);
+		}*/
 	}
 
 	void Update()
 	{
-		SetSkeletonByAngle(m_Parent.transform.eulerAngles.y);
+		SetSkeletonByAngle(m_Parent.localEulerAngles.y);
 	}
 
 	public void PlayAnimation(string anim)
@@ -49,7 +56,8 @@ public class AnimationHelper : MonoBehaviour
 		currEuler.y = -angle;
 		transform.localEulerAngles = currEuler;
 
-		int dir = (Mathf.RoundToInt(((angle - 45.0f) / 90.0f))) % 4;
+		int dir = (Mathf.RoundToInt((angle - 45.0f) / 90.0f)) % 4;
+		Debug.Log ("Angle -> " + angle + " = " + dir);
 
 		if (dir != m_CurrentDir) {
 			m_CurrentDir = dir;
@@ -59,11 +67,11 @@ public class AnimationHelper : MonoBehaviour
 
 			if (dir == 0) {// dir == 2) {
 				Vector3 scale = transform.localScale;
-				scale.x = -m_NormalScale;
+				scale.x = m_NormalScale;
 				transform.localScale = scale;
 			} else if (dir == 2) {
 				Vector3 scale = transform.localScale;
-				scale.x = m_NormalScale;
+				scale.x = -m_NormalScale;
 				transform.localScale = scale;
 			}
 		}
