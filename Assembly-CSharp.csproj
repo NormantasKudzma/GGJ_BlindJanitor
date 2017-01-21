@@ -46,10 +46,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\LevelGenerator\FloorTile.cs" />
+     <Compile Include="Assets\LevelGenerator\LevelMap.cs" />
+     <Compile Include="Assets\LevelGenerator\PropData.cs" />
+     <Compile Include="Assets\LevelGenerator\PropsPattern.cs" />
+     <Compile Include="Assets\LevelGenerator\RoomPattern.cs" />
      <Compile Include="Assets\MonsterAi\Base.cs" />
      <Compile Include="Assets\MonsterAi\Simple.cs" />
      <Compile Include="Assets\MonsterAi\Stealth.cs" />
      <Compile Include="Assets\PlayerController.cs" />
+     <None Include="Assets\LevelGenerator\SmallRoom.xml" />
+     <None Include="Assets\LevelGenerator\TrianglePattern.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
