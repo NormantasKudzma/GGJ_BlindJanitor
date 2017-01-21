@@ -28,8 +28,8 @@ public abstract class Base : MonoBehaviour
 	public float m_HuntingDistance = 2.0f;
 	protected float m_HuntingStoppingDist = 0.3f;
 
-	protected float m_MaxHuntingTime = 2.0f;
-	protected float m_MaxRoamingTime = 5.0f;
+	public float m_MaxHuntingTime = 2.0f;
+	public float m_MaxRoamingTime = 5.0f;
 
 	protected Vector3 m_Target;
 	protected NavMeshAgent m_Agent;
@@ -66,5 +66,11 @@ public abstract class Base : MonoBehaviour
 	protected void OnCollisionEnter(Collision col)
 	{
 		GetComponent<Rigidbody>().velocity = Vector3.zero;
+
+		if (col.gameObject.CompareTag("Player")) 
+		{
+			m_State = State.STATE_IDLE;
+			Debug.Log ("Player ded?");
+		}
 	}
 }
