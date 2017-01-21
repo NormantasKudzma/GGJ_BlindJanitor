@@ -73,7 +73,6 @@ public class Simple : Base
 		}
 
 		m_Agent.SetDestination(hit.position);
-		DrawPath(m_Agent.path);
 	}
 
 	void OnTriggerStay(Collider col)
@@ -95,23 +94,5 @@ public class Simple : Base
 		m_Agent.stoppingDistance = m_HuntingStoppingDist;
 
 		m_Agent.SetDestination(target);
-		DrawPath(m_Agent.path);
-	}
-
-	void DrawPath(NavMeshPath path)
-	{
-		if (path.corners.Length < 2)
-		{
-			return;
-		}
-
-		LineRenderer renderer = GetComponent<LineRenderer> ();
-		renderer.numPositions = path.corners.Length;
-
-		renderer.SetPosition(0, transform.position);
-		for (int i = 1; i < path.corners.Length; ++i) 
-		{
-			renderer.SetPosition(i, path.corners [i]);
-		}
 	}
 }
