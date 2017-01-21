@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	float m_MaxSpeed = 0.06f;
+	float m_MaxSpeed = 0.09f;
 	const float m_MaxLightDuration = 0.5f;
 	float m_LightDuration = m_MaxLightDuration;
 

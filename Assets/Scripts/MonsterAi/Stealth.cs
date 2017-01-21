@@ -13,6 +13,9 @@ public class Stealth : Base
 	}
 
 	const float m_MaxPrepareTime = 1.5f;
+	const float m_MinTimeBetweenTeleports = 2.0f;
+
+	float m_LastTeleportTime = 0.0f;
 
 	public float m_MinTeleportDistance = 4.0f;
 	public float m_MaxTeleportDistance = 8.0f;
@@ -27,7 +30,8 @@ public class Stealth : Base
 	float m_MaxBlinkEyesDelta = 5.0f;
 	float m_BlinkEyesTimer;
 	EyesState m_EyesState;
-
+	float m_BlinkProgress;
+	const float m_BlinkSpeed = 2.0f;
 
 	void Start () 
 	{
@@ -87,7 +91,9 @@ public class Stealth : Base
 			}
 		}
 
-		if (m_BlinkEyesTimer > 0.0f) 
+		if (m_BlinkEyesTimer > 0.0f
+			&& m_State != State.STATE_HUNTING
+			&& m_State != State.STATE_PREPARE) 
 		{
 			m_BlinkEyesTimer -= Time.deltaTime;
 			if (m_BlinkEyesTimer <= 0.0f) 
@@ -98,15 +104,49 @@ public class Stealth : Base
 
 		switch (m_EyesState)
 		{
-
+			case EyesState.EYES_IDLE:
+			{
+				break;
+			}
+			case EyesState.EYES_FADEIN:
+			{
+				m_BlinkProgress += m_BlinkSpeed * Time.deltaTime;
+				SetEyeColor();
+				if (m_BlinkProgress >= 1.0f) 
+				{
+					Debug.Log ("Now fade out eyes");
+					m_BlinkProgress = 1.0f;
+					m_EyesState = EyesState.EYES_FADEOUT;
+				}
+				break;
+			}
+			case EyesState.EYES_FADEOUT:
+			{
+				m_BlinkProgress -= m_BlinkSpeed * Time.deltaTime;
+				SetEyeColor();
+				if (m_BlinkProgress <= 0.0f) 
+				{
+					Debug.Log ("now idle eyes");
+					m_BlinkProgress = 0.0f;
+					m_EyesState = EyesState.EYES_IDLE;
+					m_BlinkEyesTimer = Random.Range(0.5f * m_MaxBlinkEyesDelta, m_MaxBlinkEyesDelta);
+				}
+				break;
+			}
+			default:
+			{
+				break;
+			}
 		}
 	}
 
 	protected override void StartHunting(Vector3 target)
 	{
 		if (m_State != State.STATE_PREPARE
-			&& m_State != State.STATE_HUNTING) 
+			&& m_State != State.STATE_HUNTING
+			&& m_LastTeleportTime + m_MinTimeBetweenTeleports < Time.time) 
 		{
+			m_LastTeleportTime = Time.time;
 			PrepareForAttack();
 		}
 	}
@@ -168,6 +208,15 @@ public class Stealth : Base
 
 	void BlinkEyes()
 	{
-		//do stuff
+		Debug.Log ("Blink eyes");
+		m_EyesState = EyesState.EYES_FADEIN;
+		m_BlinkProgress = 0.0f;
+	}
+
+	void SetEyeColor()
+	{
+		var color = m_Eyes.color;
+		color.a = m_BlinkProgress;
+		m_Eyes.color = color;
 	}
 }

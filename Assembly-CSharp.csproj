@@ -46,10 +46,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\MonsterAi\Base.cs" />
-     <Compile Include="Assets\MonsterAi\Simple.cs" />
-     <Compile Include="Assets\MonsterAi\Stealth.cs" />
      <Compile Include="Assets\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\MonsterAi\Base.cs" />
+     <Compile Include="Assets\Scripts\MonsterAi\Simple.cs" />
+     <Compile Include="Assets\Scripts\MonsterAi\Stealth.cs" />
+     <None Include="Assets\Animations\spineboy\spineboy.atlas.txt" />
+     <None Include="Assets\Animations\spineboy\spineboy.json.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
