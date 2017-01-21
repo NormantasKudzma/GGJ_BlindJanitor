@@ -55,8 +55,9 @@
      <Compile Include="Assets\MonsterAi\Simple.cs" />
      <Compile Include="Assets\MonsterAi\Stealth.cs" />
      <Compile Include="Assets\PlayerController.cs" />
-     <None Include="Assets\LevelGenerator\SmallRoom.xml" />
-     <None Include="Assets\LevelGenerator\TrianglePattern.xml" />
+     <None Include="Assets\Resources\SinglePattern.xml" />
+     <None Include="Assets\Resources\SmallRoom.xml" />
+     <None Include="Assets\Resources\TrianglePattern.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

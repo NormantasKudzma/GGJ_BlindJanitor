@@ -4,7 +4,7 @@
 	<Tile FloorSprite="floor-1" WallSprite="stright-1" XIndex="1" YIndex="0"/>
 	<Tile FloorSprite="floor-1" WallSprite="corner-2" XIndex="2" YIndex="0"/>
 	<Tile FloorSprite="floor-1" WallSprite="stright-2" XIndex="0" YIndex="1"/>
-	<Tile FloorSprite="floor-1" WallSprite="" XIndex="1" YIndex="1"/>
+	<Tile FloorSprite="floor-1" WallSprite="" XIndex="1" YIndex="1" PropPatternType="Small" SpecificProp="Circle"/>
 	<Tile FloorSprite="floor-1" WallSprite="stright-2" XIndex="2" YIndex="1"/>
 	<Tile FloorSprite="floor-1" WallSprite="corner-3" XIndex="0" YIndex="2"/>
 	<Tile FloorSprite="floor-1" WallSprite="stright-1" XIndex="1" YIndex="2"/>

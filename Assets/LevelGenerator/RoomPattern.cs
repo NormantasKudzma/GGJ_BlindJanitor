@@ -21,6 +21,8 @@ namespace Assets.LevelGenerator
 		{
 			// "LevelGenerator/SmallRoom.xml"
 			TextAsset asset = Resources.Load<TextAsset>(file);
+			Debug.Log("loadinam - " + file);
+			Debug.Log(asset != null ? "asset not null" : "asset is null!");
 			XmlDocument doc = new XmlDocument();
 			doc.LoadXml(asset.text);
 
