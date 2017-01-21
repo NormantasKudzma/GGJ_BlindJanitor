@@ -48,7 +48,6 @@ public class Stealth : Base
 		SphereCollider c = GetComponent<SphereCollider> ();
 		if (c != null)
 		{
-			c.radius = m_HuntingDistance;
 			c.isTrigger = true;
 		}
 

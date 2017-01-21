@@ -25,7 +25,6 @@ public abstract class Base : MonoBehaviour
 
 	public float m_HuntingAcceleration = 8.0f;
 	public float m_HuntingSpeed = 3.5f;
-	public float m_HuntingDistance = 2.0f;
 	protected float m_HuntingStoppingDist = 0.3f;
 
 	public float m_MaxHuntingTime = 2.0f;

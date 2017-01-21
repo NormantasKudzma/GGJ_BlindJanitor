@@ -74,7 +74,6 @@
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpriteVertexLighting.cginc" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpriteShadows.cginc" />
      <None Include="Assets\Animations\Monster_01\Side Json\skeleton.atlas.txt" />
-     <None Include="Assets\Animations\Monster_02\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpritePixelLighting.cginc" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpriteLighting.cginc" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Gauge\Gauge.atlas.txt" />

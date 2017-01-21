@@ -45,6 +45,7 @@ public class AnimationHelper : MonoBehaviour
 	public void PlayAnimation(string anim)
 	{
 		if (anim != m_CurrentAnim) {
+			Debug.Log (m_AnimationScript == null ? "NULL" : "not null");
 			m_AnimationScript.AnimationName = anim;
 			m_CurrentAnim = anim;
 		}
@@ -57,7 +58,7 @@ public class AnimationHelper : MonoBehaviour
 		transform.localEulerAngles = currEuler;
 
 		int dir = (Mathf.RoundToInt((angle - 45.0f) / 90.0f)) % 4;
-		Debug.Log ("Angle -> " + angle + " = " + dir);
+		//Debug.Log ("Angle -> " + angle + " = " + dir);
 
 		if (dir != m_CurrentDir) {
 			m_CurrentDir = dir;

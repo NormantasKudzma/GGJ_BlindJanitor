@@ -5,16 +5,20 @@ using UnityEngine.AI;
 
 public class Simple : Base 
 {
+	AnimationHelper m_AnimHelper;
+
 	void Start () {
 		m_IdleTime = m_MaxIdleTime;
 		m_State = State.STATE_IDLE;
 		m_Agent = GetComponent<NavMeshAgent>();
 		m_Agent.autoRepath = false;
 
+		m_AnimHelper = GetComponentInChildren<AnimationHelper>();
+		//m_AnimHelper.PlayAnimation ("Idle");
+
 		SphereCollider c = GetComponent<SphereCollider> ();
 		if (c != null)
 		{
-			c.radius = m_HuntingDistance;
 			c.isTrigger = true;
 		}
 	}
@@ -30,6 +34,7 @@ public class Simple : Base
 				{
 					m_State = State.STATE_IDLE;
 					m_IdleTime = Random.Range(m_MinIdleTime, m_MaxIdleTime);
+					m_AnimHelper.PlayAnimation ("Idle");
 				}
 				break;
 			}
@@ -73,6 +78,7 @@ public class Simple : Base
 		}
 
 		m_Agent.SetDestination(hit.position);
+		m_AnimHelper.PlayAnimation ("Walk");
 	}
 
 	void OnTriggerStay(Collider col)
@@ -94,5 +100,8 @@ public class Simple : Base
 		m_Agent.stoppingDistance = m_HuntingStoppingDist;
 
 		m_Agent.SetDestination(target);
+
+
+		m_AnimHelper.PlayAnimation ("Walk");
 	}
 }
