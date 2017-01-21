@@ -80,8 +80,9 @@ namespace Assets.LevelGenerator
 					}
 				}
 			}
-			m_Width = maxXIndex - minXIndex;
-			m_Height = maxYIndex - maxXIndex;
+			m_Width = maxXIndex - minXIndex + 1;
+			m_Height = maxYIndex - minYIndex + 1;
+			Debug.Log("Room size: " + m_Width.ToString() + " x " + m_Height.ToString());
 		}
 	}
 }

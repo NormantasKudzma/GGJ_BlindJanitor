@@ -27,15 +27,17 @@ namespace Assets.LevelGenerator
 
 		void Start()
 		{
-			//LoadRoomPatters();
-			//LoadPropPatterns();
+			LoadRoomPatters();
+			LoadPropPatterns();
 			GenerateMap();
+
+			TestLevel();
 		}
 
-		public void GenerateMap()
+		void TestLevel()
 		{
-			float cellSize = 1.0f;
-			int roomWidth = 6;
+			float cellSize = 0.7f;
+			int roomWidth = 12;
 			int roomHeight = 6;
 			float startX = -cellSize * (roomWidth / 2.0f);
 			float startY = -cellSize * (roomHeight / 2.0f);
@@ -48,46 +50,50 @@ namespace Assets.LevelGenerator
 					{
 						if (j == 0)
 						{
-							Instantiate(OutCornerTopLeftTile, pos, Quaternion.identity);
+							Instantiate(OutCornerTopLeftTile, pos, Quaternion.identity, transform);
 						}
 						else if (j == (roomHeight - 1))
 						{
-							Instantiate(OutCornerBottomLeftTile, pos, Quaternion.identity);
+							Instantiate(OutCornerBottomLeftTile, pos, Quaternion.identity, transform);
 						}
 						else
 						{
-							Instantiate(WallLeftTile, pos, Quaternion.identity);
+							Instantiate(WallLeftTile, pos, Quaternion.identity, transform);
 						}
 					}
 					else if (i == (roomWidth - 1))
 					{
 						if (j == 0)
 						{
-							Instantiate(OutCornerTopRightTile, pos, Quaternion.identity);
+							Instantiate(OutCornerTopRightTile, pos, Quaternion.identity, transform);
 						}
 						else if (j == (roomHeight - 1))
 						{
-							Instantiate(OutCornerBottomRightTile, pos, Quaternion.identity);
+							Instantiate(OutCornerBottomRightTile, pos, Quaternion.identity, transform);
 						}
 						else
 						{
-							Instantiate(WallRightTile, pos, Quaternion.identity);
+							Instantiate(WallRightTile, pos, Quaternion.identity, transform);
 						}
 					}
 					else if (j == 0)
 					{
-						Instantiate(WallTopTile, pos, Quaternion.identity);
+						Instantiate(WallTopTile, pos, Quaternion.identity, transform);
 					}
 					else if (j == (roomHeight - 1))
 					{
-						Instantiate(WallBottomTile, pos, Quaternion.identity);
+						Instantiate(WallBottomTile, pos, Quaternion.identity, transform);
 					}
 					else
 					{
-						Instantiate(EmptyTile, pos, Quaternion.identity);
+						Instantiate(EmptyTile, pos, Quaternion.identity, transform);
 					}
 				}
 			}
+		}
+
+		public void GenerateMap()
+		{
 		}
 
 		public void LoadRoomPatters()

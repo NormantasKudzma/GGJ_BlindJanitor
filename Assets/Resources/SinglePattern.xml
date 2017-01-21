@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Pattern Type="Medium">
-	<Prop Sprite="prop-1" OffsetX="0" OffsetY="0.5"/>
-	<Prop Sprite="prop-1" OffsetX="-0.5" OffsetY="-0.2"/>
-	<Prop Sprite="prop-1" OffsetX="0.5" OffsetY="0.2"/>
+<Pattern Type="Small">
+	<Prop Sprite="prop-1" OffsetX="0.0" OffsetY="0.0"/>
 </Pattern>
