@@ -47,8 +47,9 @@ namespace Assets.LevelGenerator
 						offset.y = float.Parse(offsetYAttribute.Value);
 					}
 					prop.SpriteOffset = offset;
+
+					m_Props.Add(prop);
 				}
-				m_Props.Add(prop);
 			}
 
 		}
