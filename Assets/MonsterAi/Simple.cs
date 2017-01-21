@@ -16,7 +16,6 @@ public class Simple : Base
 		{
 			c.radius = m_HuntingDistance;
 			c.isTrigger = true;
-			// New comment
 		}
 	}
 
