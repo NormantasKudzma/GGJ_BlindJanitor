@@ -50,7 +50,6 @@
      <Compile Include="Assets\PlayerMovementScripts\CameraController.cs" />
      <Compile Include="Assets\PlayerMovementScripts\PlayerController.cs" />
      <Compile Include="Assets\PlayerMovementScripts\SpotLightEffect.cs" />
-     <Compile Include="Assets\Scripts\AnimatePlz.cs" />
      <Compile Include="Assets\Scripts\AnimationHelper.cs" />
      <Compile Include="Assets\Scripts\MonsterAi\Base.cs" />
      <Compile Include="Assets\Scripts\MonsterAi\Simple.cs" />

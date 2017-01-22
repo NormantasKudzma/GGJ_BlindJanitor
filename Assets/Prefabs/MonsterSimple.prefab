@@ -182,6 +182,7 @@ MonoBehaviour:
   m_UpSkeleton: {fileID: 11400000, guid: 3e026c62d694a574dbde772399f07b2b, type: 2}
   m_DownSkeleton: {fileID: 11400000, guid: 2c58c405f064d8d4582b5b719cd959d9, type: 2}
   m_RightSkeleton: {fileID: 11400000, guid: 77541d7320cceff49948b70ee53c9fa3, type: 2}
+  m_ChangeSkeletonsAuto: 1
 --- !u!114 &114933682669053046
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -18,6 +18,8 @@ public class AnimationHelper : MonoBehaviour
 	public SkeletonDataAsset m_DownSkeleton;
 	public SkeletonDataAsset m_RightSkeleton;
 
+	public bool m_ChangeSkeletonsAuto = true;
+
 	int m_CurrentDir;
 	float m_NormalScale;
 	SkeletonAnimation m_AnimationScript;
@@ -53,27 +55,34 @@ public class AnimationHelper : MonoBehaviour
 
 	void Update()
 	{
-		SetSkeletonByAngle(m_Parent.localEulerAngles.y);
+		if (m_ChangeSkeletonsAuto) {
+			SetSkeletonByAngle(m_Parent.localEulerAngles.y, true);
+		}
 	}
 
-	public void PlayAnimation(string anim)
+	public float PlayAnimation(string anim)
 	{
 		if (anim != m_CurrentAnim) {
 			m_AnimationScript.AnimationName = anim;
 			m_CurrentAnim = anim;
 		}
+
+		var currAnim = m_AnimationScript.AnimationState.Data.SkeletonData.FindAnimation(anim);
+		return currAnim != null ? currAnim.Duration : 0.0f;
 	}
 
 	public void SetSkeletonByDirection(Direction d)
 	{
-		SetSkeletonByAngle((int)d * 91.0f);
+		SetSkeletonByAngle((int)d * 91.0f, false);
 	}
 
-	public void SetSkeletonByAngle(float angle)
+	public void SetSkeletonByAngle(float angle, bool adjustAngle)
 	{
-		Vector3 currEuler = transform.localEulerAngles;
-		currEuler.y = -angle;
-		transform.localEulerAngles = currEuler;
+		if (adjustAngle) {
+			Vector3 currEuler = transform.localEulerAngles;
+			currEuler.y = -angle;
+			transform.localEulerAngles = currEuler;
+		}
 
 		int dir = (Mathf.RoundToInt((angle - 45.0f) / 90.0f)) % 4;
 		//Debug.Log ("Angle -> " + angle + " = " + dir);
