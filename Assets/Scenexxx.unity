@@ -90,7 +90,7 @@ NavMeshSettings:
     manualCellSize: 0
     cellSize: 0.16666667
     accuratePlacement: 0
-  m_NavMeshData: {fileID: 23800000, guid: a9d859c55d358f645bf6f982f6b011e1, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: db8f414db55d6594f97a56891776000f, type: 2}
 --- !u!1001 &95353456
 Prefab:
   m_ObjectHideFlags: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_UpSkeleton: {fileID: 11400000, guid: db7971c75edcc8e49a8b346fd4ed241f, type: 2}
   m_DownSkeleton: {fileID: 11400000, guid: 5d173494cdd650b4abb15bdc9ac96701, type: 2}
   m_RightSkeleton: {fileID: 11400000, guid: eed530b21f213de41943951995c0aec3, type: 2}
-  m_ChangeSkeletonsAuto: 1
+  m_AutoSkeletons: 1
 --- !u!1001 &550194093
 Prefab:
   m_ObjectHideFlags: 0
@@ -547,6 +547,11 @@ Prefab:
         type: 2}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178646847972234, guid: 7c2c8d4777c98e14cb193d458472db97,
+        type: 2}
+      propertyPath: m_AutoSkeletons
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c2c8d4777c98e14cb193d458472db97, type: 2}
@@ -1813,7 +1818,7 @@ Transform:
   m_GameObject: {fileID: 1847743296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 15, y: 1, z: 15}
+  m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 1026793462}
   m_RootOrder: 0
@@ -1973,7 +1978,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2043064412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.57, y: 1.4482422, z: 2.06}
+  m_LocalPosition: {x: 11.05, y: 1.4482422, z: 2.17}
   m_LocalScale: {x: 1.8, y: 1, z: 1.8}
   m_Children: []
   m_Father: {fileID: 1026793462}
