@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: skeleton_skeleton2
-  m_Shader: {fileID: 4800000, guid: 0b582d17e0be0d0479a3b3eb9dc7ca37, type: 3}
+  m_Shader: {fileID: 4800000, guid: fc63c0cc067d6a246a7fef98e744fbb8, type: 3}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _FIXED_NORMALS _SPHERICAL_HARMONICS
   m_LightmapFlags: 5
   m_CustomRenderQueue: 3000
