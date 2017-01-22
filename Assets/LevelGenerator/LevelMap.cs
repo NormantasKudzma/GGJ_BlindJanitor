@@ -15,7 +15,7 @@ namespace Assets.LevelGenerator
 		private static int m_FieldWidth = 100;
 		private static int m_FieldHeight = 100;
 		private FieldTile[,] m_Field = new FieldTile[m_FieldWidth, m_FieldHeight];
-		private float m_CellSize = 2.56f;
+		private float m_CellSize = 2f;
 
 		public Transform OutCornerTopLeftTile;
 		public Transform OutCornerTopRightTile;
@@ -57,7 +57,8 @@ namespace Assets.LevelGenerator
 			{
 				for (int j = 0; j < m_FieldWidth; ++j)
 				{
-					Vector3 position = new Vector3(startX + m_CellSize * j, startY - m_CellSize * i, 0.0f);
+					Vector3 position = new Vector3(startX + m_CellSize * j, 0.0f, startY - m_CellSize * i);
+					//Debug.Log (position);
 					FieldTile tile = new FieldTile();
 					tile.Type = TileType.Void;
 					tile.Position = position;
@@ -135,7 +136,7 @@ namespace Assets.LevelGenerator
 							float maxVal = PropPrefabs.Length - 0.5f;
 							int randomIndex = (int)Math.Round(UnityEngine.Random.Range(minVal, maxVal));
 							Instantiate(PropPrefabs[randomIndex], tile.Position, Quaternion.identity, transform);
-							Debug.Log("Creating prop: " + randomIndex.ToString());
+							//Debug.Log("Creating prop: " + randomIndex.ToString());
 						}
 					}
 				}
@@ -202,7 +203,7 @@ namespace Assets.LevelGenerator
 
 		public void GenerateMap()
 		{
-			RoomPattern room = m_RoomPatterns[4];
+			RoomPattern room = m_RoomPatterns[3];
 			int roomWidth = room.Width;
 			int roomHeight = room.Height;
 			int indexDeltaX = (m_FieldWidth / 2) - (roomWidth / 2);

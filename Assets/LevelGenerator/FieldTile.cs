@@ -9,7 +9,7 @@ namespace Assets.LevelGenerator
 	public class FieldTile
 	{
 		public TileType Type { set; get; }
-		public Vector2 Position { set; get; }
+		public Vector3 Position { set; get; }
 		public int IndexX { set; get; }
 		public int IndexY { set; get; }
 	}
