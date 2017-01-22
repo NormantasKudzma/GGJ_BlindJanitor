@@ -47,6 +47,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\LevelGenerator.cs" />
+     <Compile Include="Assets\LevelGenerator\FieldTile.cs" />
+     <Compile Include="Assets\LevelGenerator\FloorTile.cs" />
+     <Compile Include="Assets\LevelGenerator\LevelMap.cs" />
+     <Compile Include="Assets\LevelGenerator\PropData.cs" />
+     <Compile Include="Assets\LevelGenerator\PropsPattern.cs" />
+     <Compile Include="Assets\LevelGenerator\RoomPattern.cs" />
+     <Compile Include="Assets\LevelGenerator\TileType.cs" />
      <Compile Include="Assets\OldPlayerMovement.cs" />
      <Compile Include="Assets\PlayerMovementScripts\CameraController.cs" />
      <Compile Include="Assets\PlayerMovementScripts\PlayerController.cs" />
@@ -162,7 +169,9 @@
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpriteLighting.cginc" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Shaders\Skeleton.shader" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\ShaderShared.cginc" />
+     <None Include="Assets\Resources\SinglePattern.xml" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Shaders\Bones.shader" />
+     <None Include="Assets\Resources\BigRoom.xml" />
      <None Include="Assets\Animations\Monster_03\Front Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Shaders\HiddenPass.shader" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Spineboy\spineboy.atlas.txt" />
@@ -171,6 +180,7 @@
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpritesVertexLit.shader" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\SkeletonTint.shader" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpriteVertexLighting.cginc" />
+     <None Include="Assets\Resources\SmallRoom.xml" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\SkeletonGraphic\Shaders\SkeletonGraphic.shader" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Eyes\eyes.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Raggedy Spineboy\Raggedy Spineboy.atlas.txt" />
@@ -193,9 +203,12 @@
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpritesPixelLit.shader" />
      <None Include="Assets\Animations\Monster_01\Back Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Gauge\Gauge.atlas.txt" />
+     <None Include="Assets\Resources\LargeCrossSection.xml" />
      <None Include="Assets\Distort.shader" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\SkeletonRenderSeparator\SkeletonRenderSeparator.txt" />
      <None Include="Assets\Animations\Monster_03\Side Json\skeleton.atlas.txt" />
+     <None Include="Assets\Resources\TrianglePattern.xml" />
+     <None Include="Assets\Resources\CrossSection.xml" />
      <None Include="Assets\Animations\Baba\Side Json\skeleton.atlas.txt" />
      <None Include="Assets\Animations\Baba\Front Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpriteUnlit.cginc" />

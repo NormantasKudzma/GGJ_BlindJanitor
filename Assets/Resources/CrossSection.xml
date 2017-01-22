@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Room>
+	<TopGate Size="3" />
+	<Tile FloorSprite="OutCornerTopLeft" XIndex="1" YIndex="0" Corridor="Top" />
+	<Tile FloorSprite="WallTop" XIndex="2" YIndex="0" Corridor="Top" />
+	<Tile FloorSprite="OutCornerTopRight" XIndex="3" YIndex="0" Corridor="Top" />
+
+	<Tile FloorSprite="OutCornerTopLeft" XIndex="0" YIndex="1" Corridor="Left"/>
+	<Tile FloorSprite="InCornerTopLeft" XIndex="1" YIndex="1" Prop="Circle"/>
+	<Tile FloorSprite="Empty" XIndex="2" YIndex="1" Prop="Circle"/>
+	<Tile FloorSprite="InCornerTopRight" XIndex="3" YIndex="1" Prop="Circle"/>
+	<Tile FloorSprite="OutCornerTopRight" XIndex="4" YIndex="1" Corridor="Right"/>
+
+	<Tile FloorSprite="WallLeft" XIndex="0" YIndex="2" Corridor="Left"/>
+	<Tile FloorSprite="Empty" XIndex="1" YIndex="2" Prop="Circle"/>
+	<Tile FloorSprite="Empty" XIndex="2" YIndex="2" Prop="Circle"/>
+	<Tile FloorSprite="Empty" XIndex="3" YIndex="2" Prop="Circle"/>
+	<Tile FloorSprite="WallRight" XIndex="4" YIndex="2" Corridor="Right"/>
+
+	<Tile FloorSprite="OutCornerBottomLeft" XIndex="0" YIndex="3" Corridor="Left"/>
+	<Tile FloorSprite="InCornerBottomLeft" XIndex="1" YIndex="3" Prop="Circle"/>
+	<Tile FloorSprite="Empty" XIndex="2" YIndex="3" Prop="Circle"/>
+	<Tile FloorSprite="InCornerBottomRight" XIndex="3" YIndex="3" Prop="Circle"/>
+	<Tile FloorSprite="OutCornerBottomRight" XIndex="4" YIndex="3" Corridor="Right"/>
+
+	<Tile FloorSprite="OutCornerBottomLeft" XIndex="1" YIndex="4" Corridor="Bottom"/>
+	<Tile FloorSprite="WallBottom" XIndex="2" YIndex="4" Corridor="Bottom"/>
+	<Tile FloorSprite="OutCornerBottomRight" XIndex="3" YIndex="4" Corridor="Bottom"/>
+</Room>

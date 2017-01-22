@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Room>
+	<Tile FloorSprite="OutCornerTopLeft" XIndex="0" YIndex="0"/>
+	<Tile FloorSprite="WallTop" XIndex="1" YIndex="0" Corridor="Top" />
+	<Tile FloorSprite="OutCornerTopRight" XIndex="2" YIndex="0"/>
+	<Tile FloorSprite="WallLeft" XIndex="0" YIndex="1" Corridor="Left"/>
+	<Tile FloorSprite="Empty" XIndex="1" YIndex="1" Prop="Circle"/>
+	<Tile FloorSprite="WallRight" XIndex="2" YIndex="1" Corridor="Right"/>
+	<Tile FloorSprite="OutCornerBottomLeft" XIndex="0" YIndex="2"/>
+	<Tile FloorSprite="WallBottom" XIndex="1" YIndex="2" Corridor="Bottom"/>
+	<Tile FloorSprite="OutCornerBottomRight" XIndex="2" YIndex="2"/>
+</Room>
