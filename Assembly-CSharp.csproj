@@ -60,6 +60,7 @@
      <None Include="Assets\Resources\SinglePattern.xml" />
      <None Include="Assets\Resources\BigRoom.xml" />
      <None Include="Assets\Resources\SmallRoom.xml" />
+     <None Include="Assets\Resources\LargeRoom.xml" />
      <None Include="Assets\Resources\LargeCrossSection.xml" />
      <None Include="Assets\Resources\TrianglePattern.xml" />
      <None Include="Assets\Resources\CrossSection.xml" />
