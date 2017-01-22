@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SpriteWithLights
+  m_Name: PropsWithLights
   m_Shader: {fileID: 10800, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _ALPHA_CLIP _FIXED_NORMALS _SPHERICAL_HARMONICS
   m_LightmapFlags: 1
@@ -163,7 +163,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.8455882, g: 0.3653353, b: 0.14922144, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}

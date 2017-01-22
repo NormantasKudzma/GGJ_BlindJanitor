@@ -37,14 +37,12 @@ public class SpotLightEffect : MonoBehaviour {
 		
 		timeToFull = (maxAngle - defaultAngle) / angleIncrease;
 		nextStepSpriteTime = timeToFull / sprites.Length;
-
-		InputListener ();
 		LightAnimation ();
 	
 	}
 
-	void InputListener(){
-		if (Input.GetKeyDown (KeyCode.Space) && animateLight == false) {
+	public void InputListener(){
+		if (animateLight == false) {
 			animateLight = true;
 			spriteGO = (GameObject)Instantiate (sonarSprite, transform.position - Vector3.up * 5f, Quaternion.Euler (90, 0, 0));
 			sr = spriteGO.GetComponent<SpriteRenderer> ();
