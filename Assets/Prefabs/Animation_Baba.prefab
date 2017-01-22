@@ -75,7 +75,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
 --- !u!33 &33215577216424066
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_UpSkeleton: {fileID: 11400000, guid: db7971c75edcc8e49a8b346fd4ed241f, type: 2}
   m_DownSkeleton: {fileID: 11400000, guid: 5d173494cdd650b4abb15bdc9ac96701, type: 2}
   m_RightSkeleton: {fileID: 11400000, guid: eed530b21f213de41943951995c0aec3, type: 2}
-  m_AutoSkeletons: 1
+  m_AutoSkeletons: 0
 --- !u!114 &114206960018256322
 MonoBehaviour:
   m_ObjectHideFlags: 1
