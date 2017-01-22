@@ -46,11 +46,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\LevelGenerator\FieldTile.cs" />
      <Compile Include="Assets\LevelGenerator\FloorTile.cs" />
      <Compile Include="Assets\LevelGenerator\LevelMap.cs" />
      <Compile Include="Assets\LevelGenerator\PropData.cs" />
      <Compile Include="Assets\LevelGenerator\PropsPattern.cs" />
      <Compile Include="Assets\LevelGenerator\RoomPattern.cs" />
+     <Compile Include="Assets\LevelGenerator\TileType.cs" />
      <Compile Include="Assets\MonsterAi\Base.cs" />
      <Compile Include="Assets\MonsterAi\Simple.cs" />
      <Compile Include="Assets\MonsterAi\Stealth.cs" />
