@@ -173,7 +173,7 @@ namespace Assets.LevelGenerator
 
 		public void GenerateMap()
 		{
-			RoomPattern room = m_RoomPatterns[2];
+			RoomPattern room = m_RoomPatterns[3];
 			int roomWidth = room.Width;
 			int roomHeight = room.Height;
 			int indexDeltaX = (m_FieldWidth / 2) - (roomWidth / 2);
@@ -195,6 +195,7 @@ namespace Assets.LevelGenerator
 				"SmallRoom",
 				"BigRoom",
 				"CrossSection",
+				"LargeCrossSection",
 				//"CorridorRoom"
 			};
 			foreach (string patternFile in files)
