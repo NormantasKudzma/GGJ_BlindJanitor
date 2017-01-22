@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Spine;
+using Spine.Unity;
 
 public class PlayerController : MonoBehaviour {
 
@@ -17,6 +19,8 @@ public class PlayerController : MonoBehaviour {
 	AnimationHelper m_AnimHelper;
 	SpotLightEffect sle;
 
+	public SkeletonDataAsset m_DeathAnim;
+	bool m_Dead = false;
 
 
 	void Start () {
@@ -27,7 +31,18 @@ public class PlayerController : MonoBehaviour {
 		m_AttackTimer = 0.0f;
 	}
 
+	public void DiePlz()
+	{
+		m_Dead = true;
+		m_AnimHelper.SetLoop(false);
+		m_AnimHelper.PlayAnimation("Idle");
+		m_AnimHelper.SetSkeleton(m_DeathAnim);
+	}
+
 	void Update () {
+		if (m_Dead) {
+			return;
+		}
 
 		float hspeed = Input.GetAxis ("Horizontal");
 		float vspeed = Input.GetAxis ("Vertical");

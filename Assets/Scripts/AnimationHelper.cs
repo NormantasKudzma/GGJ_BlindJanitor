@@ -112,4 +112,9 @@ public class AnimationHelper : MonoBehaviour
 		m_AnimationScript.skeletonDataAsset = skel;
 		m_AnimationScript.Initialize (true);
 	}
+
+	public void SetLoop(bool loop)
+	{
+		m_AnimationScript.loop = loop;
+	}
 }

@@ -10,6 +10,7 @@ public abstract class Base : MonoBehaviour
 		STATE_ROAMING,
 		STATE_IDLE,
 
+		STATE_DONE, // stop forever
 		STATE_PREPARE,
 	}
 
@@ -68,8 +69,11 @@ public abstract class Base : MonoBehaviour
 
 		if (col.gameObject.CompareTag("Player")) 
 		{
-			m_State = State.STATE_IDLE;
+			m_State = State.STATE_DONE;
+			m_Agent.Stop();
+
 			Debug.Log ("Player ded?");
+			(col.gameObject.GetComponent<PlayerController>()).DiePlz();
 		}
 	}
 }
