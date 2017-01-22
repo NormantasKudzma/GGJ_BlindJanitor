@@ -117,6 +117,7 @@
      <None Include="Assets\Resources\LargeCrossSection.xml" />
      <None Include="Assets\Distort.shader" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\SkeletonRenderSeparator\SkeletonRenderSeparator.txt" />
+     <None Include="Assets\Animations\Tentacles\skeleton.atlas.txt" />
      <None Include="Assets\Animations\Monster_03\Side Json\skeleton.atlas.txt" />
      <None Include="Assets\Resources\TrianglePattern.xml" />
      <None Include="Assets\Resources\CrossSection.xml" />

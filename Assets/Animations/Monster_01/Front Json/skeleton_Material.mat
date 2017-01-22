@@ -64,10 +64,10 @@ Material:
       second: 10
     - first:
         name: _EmissionPower
-      second: 2
+      second: 2.39
     - first:
         name: _Hue
-      second: 0
+      second: 0.5
     - first:
         name: _RenderQueue
       second: 0
@@ -92,13 +92,13 @@ Material:
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
-      second: {r: 0, g: 0, b: 0, a: 0}
+      second: {r: 1, g: 1, b: 1, a: 0}
     - first:
         name: _FixedNormal
       second: {r: 0, g: 0, b: -1, a: 1}
     - first:
         name: _OverlayColor
-      second: {r: 0, g: 0, b: 0, a: 0}
+      second: {r: 0.1102941, g: 0.10705016, b: 0.10705016, a: 0}
     - first:
         name: _RimColor
       second: {r: 1, g: 1, b: 1, a: 1}

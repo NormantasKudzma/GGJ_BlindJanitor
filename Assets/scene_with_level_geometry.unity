@@ -9911,7 +9911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &693676050
 Light:
   m_ObjectHideFlags: 0
@@ -19768,6 +19768,7 @@ GameObject:
   - component: {fileID: 1438084336}
   - component: {fileID: 1438084340}
   - component: {fileID: 1438084333}
+  - component: {fileID: 1438084334}
   m_Layer: 0
   m_Name: NewPlayer
   m_TagString: Player
@@ -19787,6 +19788,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &1438084334
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1438084332}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &1438084336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19799,6 +19880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceAmmount: 15
+  m_DeathAnim: {fileID: 11400000, guid: b9941bbdc1803da40b3951a380073a22, type: 2}
 --- !u!114 &1438084337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27193,23 +27275,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82827267ce601604187fa3f462a316ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultAngle: 20
-  maxAngle: 60
+  defaultAngle: 30
+  maxAngle: 90
   angleIncrease: 80
   sonarSprite: {fileID: 1843511072276814, guid: 146e75c7e6e064a44b85ee37c3a2bfd8,
     type: 2}
   defaultSpriteScale: 1.2
   retractSpeed: 4
   sprites:
-  - {fileID: 21300000, guid: 43d5cd519dc8ecb409e9ac70bd9476ed, type: 3}
-  - {fileID: 21300000, guid: 2d7bd735c946f904c81de981d8831e8d, type: 3}
-  - {fileID: 21300000, guid: f960bfd6a089e064997e59c76b1d0d41, type: 3}
-  - {fileID: 21300000, guid: d1548ea001b7e4a46af36527490439f2, type: 3}
-  - {fileID: 21300000, guid: b02333c9878d11c498cfa5d4e4a84248, type: 3}
-  - {fileID: 21300000, guid: d840e461f3aeab34b8304335cbb48dab, type: 3}
-  - {fileID: 21300000, guid: 7324401e631333d4088caa918f437556, type: 3}
-  - {fileID: 21300000, guid: 462f0e6994019a24ab52995268879137, type: 3}
-  - {fileID: 21300000, guid: edbeb09ac2e661043ae9867f1d4476b1, type: 3}
+  - {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!108 &1998305254
 Light:
   m_ObjectHideFlags: 0
