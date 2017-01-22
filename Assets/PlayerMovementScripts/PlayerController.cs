@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Spine;
 using Spine.Unity;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -21,9 +22,12 @@ public class PlayerController : MonoBehaviour {
 
 	public SkeletonDataAsset m_DeathAnim;
 	bool m_Dead = false;
-
+	float m_DeadTimer = 2.5f;
+	float m_RestartTimer = 2.5f;
+	public GameObject m_FailedScreen;
 
 	void Start () {
+		m_FailedScreen.SetActive (false);
 		rb = GetComponent<Rigidbody> ();
 		m_AnimHelper = GetComponentInChildren<AnimationHelper>();
 		sle = GetComponentInChildren<SpotLightEffect> ();
@@ -41,6 +45,16 @@ public class PlayerController : MonoBehaviour {
 
 	void Update () {
 		if (m_Dead) {
+			m_DeadTimer -= Time.deltaTime;
+			if (m_DeadTimer <= 0.0f) {
+				m_FailedScreen.SetActive (true);
+
+				m_RestartTimer -= Time.deltaTime;
+				if (m_RestartTimer <= 0.0f) {
+					SceneManager.LoadScene("StartScreen");
+				}
+			}
+
 			return;
 		}
 
