@@ -243,3 +243,7 @@ MonoBehaviour:
   WallBottomTile: {fileID: 4382043997503744, guid: c48c64a914aef394fa4dc09182dc9ebd,
     type: 2}
   EmptyTile: {fileID: 4354876348993466, guid: 59f834981fbf38541a61fa839d718a38, type: 2}
+  PropPrefabs:
+  - {fileID: 4514492090012788, guid: 97a64573e6a53ee4bbe218e2252d481a, type: 2}
+  - {fileID: 4936749258624272, guid: 42c6a9acb2428ad46a81eda7535dfafd, type: 2}
+  - {fileID: 4601380946351156, guid: 5161ca92cc186654c8705c1e1e84d4a6, type: 2}

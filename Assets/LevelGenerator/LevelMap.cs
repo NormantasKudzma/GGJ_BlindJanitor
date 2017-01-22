@@ -11,7 +11,7 @@ namespace Assets.LevelGenerator
 		private List<PropsPattern> m_PropsPatterns = new List<PropsPattern>();
 		private List<RoomPattern> m_RoomPatterns = new List<RoomPattern>();
 		private Dictionary<string, TileType> m_TileTypeMap = new Dictionary<string, TileType>();
-		private Dictionary<TileType, Transform> m_Prefabs2 = new Dictionary<TileType, Transform>();
+		private Dictionary<TileType, Transform> m_Prefabs = new Dictionary<TileType, Transform>();
 		private static int m_FieldWidth = 100;
 		private static int m_FieldHeight = 100;
 		private FieldTile[,] m_Field = new FieldTile[m_FieldWidth, m_FieldHeight];
@@ -31,6 +31,8 @@ namespace Assets.LevelGenerator
 		public Transform WallBottomTile;
 		public Transform EmptyTile;
 
+		public Transform[] PropPrefabs;
+
 		//public Dictionary<string, Transform> Prefabs { get { return m_Prefabs; } }
 
 		//public Dictionary<string, Transform> Prefabs2;
@@ -44,7 +46,7 @@ namespace Assets.LevelGenerator
 			LoadPropPatterns();
 			GenerateMap();
 			CreateTiles();
-			//TestLevel();
+			CreateProps();
 		}
 
 		private void InitField()
@@ -83,19 +85,19 @@ namespace Assets.LevelGenerator
 			m_TileTypeMap.Add("Empty", TileType.Empty);
 			m_TileTypeMap.Add("Void", TileType.Void);
 
-			m_Prefabs2.Add(TileType.OutCornerTopLeft, OutCornerTopLeftTile);
-			m_Prefabs2.Add(TileType.OutCornerTopRight, OutCornerTopRightTile);
-			m_Prefabs2.Add(TileType.OutCornerBottomRight, OutCornerBottomRightTile);
-			m_Prefabs2.Add(TileType.OutCornerBottomLeft, OutCornerBottomLeftTile);
-			m_Prefabs2.Add(TileType.InCornerTopLeft, InCornerTopLeftTile);
-			m_Prefabs2.Add(TileType.InCornerTopRight, InCornerTopRightTile);
-			m_Prefabs2.Add(TileType.InCornerBottomRight, InCornerBottomRightTile);
-			m_Prefabs2.Add(TileType.InCornerBottomLeft, InCornerBottomLeftTile);
-			m_Prefabs2.Add(TileType.WallLeft, WallLeftTile);
-			m_Prefabs2.Add(TileType.WallTop, WallTopTile);
-			m_Prefabs2.Add(TileType.WallRight, WallRightTile);
-			m_Prefabs2.Add(TileType.WallBottom, WallBottomTile);
-			m_Prefabs2.Add(TileType.Empty, EmptyTile);
+			m_Prefabs.Add(TileType.OutCornerTopLeft, OutCornerTopLeftTile);
+			m_Prefabs.Add(TileType.OutCornerTopRight, OutCornerTopRightTile);
+			m_Prefabs.Add(TileType.OutCornerBottomRight, OutCornerBottomRightTile);
+			m_Prefabs.Add(TileType.OutCornerBottomLeft, OutCornerBottomLeftTile);
+			m_Prefabs.Add(TileType.InCornerTopLeft, InCornerTopLeftTile);
+			m_Prefabs.Add(TileType.InCornerTopRight, InCornerTopRightTile);
+			m_Prefabs.Add(TileType.InCornerBottomRight, InCornerBottomRightTile);
+			m_Prefabs.Add(TileType.InCornerBottomLeft, InCornerBottomLeftTile);
+			m_Prefabs.Add(TileType.WallLeft, WallLeftTile);
+			m_Prefabs.Add(TileType.WallTop, WallTopTile);
+			m_Prefabs.Add(TileType.WallRight, WallRightTile);
+			m_Prefabs.Add(TileType.WallBottom, WallBottomTile);
+			m_Prefabs.Add(TileType.Empty, EmptyTile);
 		}
 
 		private void CreateTiles()
@@ -107,7 +109,34 @@ namespace Assets.LevelGenerator
 					FieldTile tile = m_Field[i, j];
 					if (tile.Type != TileType.Void)
 					{
-						Instantiate(m_Prefabs2[tile.Type], tile.Position, Quaternion.identity, transform);
+						Instantiate(m_Prefabs[tile.Type], tile.Position, Quaternion.identity, transform);
+					}
+				}
+			}
+		}
+
+		private void CreateProps()
+		{
+			if (PropPrefabs == null || PropPrefabs.Length == 0)
+			{
+				return;
+			}
+			// Random random = new System.Random();
+			for (int i = 0; i < m_FieldHeight; ++i)
+			{
+				for (int j = 0; j < m_FieldWidth; ++j)
+				{
+					FieldTile tile = m_Field[i, j];
+					if (tile.Type == TileType.Empty)
+					{
+						if (UnityEngine.Random.value <= 0.3f)
+						{
+							float minVal = 0.0f;
+							float maxVal = PropPrefabs.Length - 0.5f;
+							int randomIndex = (int)Math.Round(UnityEngine.Random.Range(minVal, maxVal));
+							Instantiate(PropPrefabs[randomIndex], tile.Position, Quaternion.identity, transform);
+							Debug.Log("Creating prop: " + randomIndex.ToString());
+						}
 					}
 				}
 			}
@@ -173,7 +202,7 @@ namespace Assets.LevelGenerator
 
 		public void GenerateMap()
 		{
-			RoomPattern room = m_RoomPatterns[3];
+			RoomPattern room = m_RoomPatterns[4];
 			int roomWidth = room.Width;
 			int roomHeight = room.Height;
 			int indexDeltaX = (m_FieldWidth / 2) - (roomWidth / 2);
@@ -196,6 +225,7 @@ namespace Assets.LevelGenerator
 				"BigRoom",
 				"CrossSection",
 				"LargeCrossSection",
+				"LargeRoom",
 				//"CorridorRoom"
 			};
 			foreach (string patternFile in files)
