@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "6Zbo2R4mu5KsjPsXBqrgiuvoR1E", "spine": "3.5.46", "width": 714.16, "height": 874.79, "images": "" },
+"skeleton": { "hash": "B1WBf015geVaki2plGYQVT/fXs8", "spine": "3.5.46", "width": 714.16, "height": 874.79, "images": "" },
 "bones": [
 	{ "name": "root" },
 	{ "name": "Base", "parent": "root", "x": 2, "y": 95, "color": "1c9b00ff" },
@@ -9,11 +9,13 @@
 	{ "name": "FX", "parent": "root", "x": 1.45, "y": 9.23, "color": "ff0000ff" },
 	{ "name": "RArm", "parent": "Torso", "length": 151.86, "rotation": -112.88, "x": 162.81, "y": -143.67 },
 	{ "name": "Rleg", "parent": "Base", "length": 102.62, "rotation": -90.5, "x": 103.09, "y": 29.1 },
+	{ "name": "Shadow", "parent": "root" },
 	{ "name": "bone", "parent": "Torso", "length": 129.35, "rotation": -175.42, "x": 178.11, "y": 51.66 },
 	{ "name": "bone2", "parent": "Base", "length": 103.97, "rotation": -89.03, "x": -111.44, "y": 29.23, "color": "1c9b00ff" },
 	{ "name": "bone4", "parent": "Head", "x": 178.64, "y": -225.52 }
 ],
 "slots": [
+	{ "name": "images/Shadow", "bone": "Shadow", "attachment": "images/Shadow" },
 	{ "name": "images/Leg", "bone": "Rleg", "attachment": "images/Leg" },
 	{ "name": "images/Leg2", "bone": "bone2", "attachment": "images/Leg" },
 	{ "name": "Stick", "bone": "RArm", "attachment": "images/Stick" },
@@ -49,6 +51,9 @@
 		},
 		"images/Leg2": {
 			"images/Leg": { "x": 54.32, "y": 7.05, "rotation": 89.03, "width": 117, "height": 147 }
+		},
+		"images/Shadow": {
+			"images/Shadow": { "color": "ffffffa0", "width": 675, "height": 274 }
 		},
 		"images/fx1": {
 			"images/fx1": { "x": 208.49, "y": 166.44, "width": 153, "height": 247 },

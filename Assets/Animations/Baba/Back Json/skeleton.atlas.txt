@@ -4,64 +4,71 @@ size: 1024,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-images/Arm
-  rotate: true
-  xy: 563, 121
-  size: 214, 198
-  orig: 214, 198
-  offset: 0, 0
-  index: -1
 images/Body
   rotate: true
-  xy: 2, 6
+  xy: 2, 2
   size: 408, 348
   orig: 416, 348
   offset: 0, 0
   index: -1
 images/Head
   rotate: false
-  xy: 2, 416
+  xy: 2, 412
   size: 659, 594
   orig: 659, 594
   offset: 0, 0
   index: -1
-images/Leg
-  rotate: true
-  xy: 563, 2
-  size: 117, 147
-  orig: 117, 147
-  offset: 0, 0
-  index: -1
-images/Stick
+images/Shadow
   rotate: false
-  xy: 352, 78
-  size: 209, 336
-  orig: 209, 336
-  offset: 0, 0
-  index: -1
-images/fx1
-  rotate: true
-  xy: 763, 182
-  size: 153, 247
-  orig: 153, 247
-  offset: 0, 0
+  xy: 352, 70
+  size: 665, 261
+  orig: 675, 274
+  offset: 5, 6
   index: -1
 images/fx2
   rotate: true
-  xy: 663, 337
+  xy: 663, 333
   size: 673, 309
   orig: 673, 309
   offset: 0, 0
   index: -1
 
 skeleton2.png
-size: 1024,256
+size: 1024,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
+images/Arm
+  rotate: false
+  xy: 573, 251
+  size: 214, 198
+  orig: 214, 198
+  offset: 0, 0
+  index: -1
+images/Leg
+  rotate: false
+  xy: 789, 302
+  size: 117, 147
+  orig: 117, 147
+  offset: 0, 0
+  index: -1
+images/Stick
+  rotate: true
+  xy: 2, 2
+  size: 209, 336
+  orig: 209, 336
+  offset: 0, 0
+  index: -1
+images/fx1
+  rotate: true
+  xy: 340, 58
+  size: 153, 247
+  orig: 153, 247
+  offset: 0, 0
+  index: -1
 images/fx3
   rotate: false
-  xy: 2, 2
+  xy: 2, 213
   size: 569, 236
   orig: 569, 236
   offset: 0, 0

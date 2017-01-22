@@ -56,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e0a6dfeb9ab82a1448fbc30fdd8a9f50, type: 2}
+  - {fileID: 2100000, guid: 0bed9b0158b12b84bb5b0763d4e27c95, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,4 +121,4 @@ MonoBehaviour:
   m_UpSkeleton: {fileID: 11400000, guid: 3e026c62d694a574dbde772399f07b2b, type: 2}
   m_DownSkeleton: {fileID: 11400000, guid: 2c58c405f064d8d4582b5b719cd959d9, type: 2}
   m_RightSkeleton: {fileID: 11400000, guid: 77541d7320cceff49948b70ee53c9fa3, type: 2}
-  m_ChangeSkeletonsAuto: 1
+  m_AutoSkeletons: 1

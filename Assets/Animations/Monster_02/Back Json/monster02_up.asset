@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9c814d4bff154478c171cea7c9f8d3, type: 3}
+  m_Name: monster02_up
+  m_EditorClassIdentifier: 
+  atlasAssets:
+  - {fileID: 11400000, guid: eb5c100aa61608e4d92fe8ebca37b33b, type: 2}
+  scale: 0.01
+  skeletonJSON: {fileID: 4900000, guid: dd9b206b7a83d8f4fb3e2368082edc2f, type: 3}
+  fromAnimation: []
+  toAnimation: []
+  duration: []
+  defaultMix: 0
+  controller: {fileID: 0}

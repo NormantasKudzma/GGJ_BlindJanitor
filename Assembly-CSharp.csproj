@@ -151,7 +151,9 @@
      <Compile Include="Assets\spine-unity\Assets\spine-unity\SkeletonUtility\SkeletonUtilityBone.cs" />
      <Compile Include="Assets\spine-unity\Assets\spine-unity\SkeletonUtility\SkeletonUtilityConstraint.cs" />
      <Compile Include="Assets\spine-unity\Assets\spine-unity\SpineAttributes.cs" />
+     <None Include="Assets\Animations\Monster_03\Back Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Editor\Resources\SpineAssetDatabaseMarker.txt" />
+     <None Include="Assets\Animations\Baba\Death Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\FootSoldier\Equipment\Equipment.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Dragon\dragon.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpriteShadows.cginc" />
@@ -161,6 +163,7 @@
      <None Include="Assets\spine-unity\Assets\spine-unity\Shaders\Skeleton.shader" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\ShaderShared.cginc" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Shaders\Bones.shader" />
+     <None Include="Assets\Animations\Monster_03\Front Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Shaders\HiddenPass.shader" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Spineboy\spineboy.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Goblins\goblins.atlas.txt" />
@@ -174,6 +177,7 @@
      <None Include="Assets\Animations\Baba\Back Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpritesUnlit.shader" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Strechyman\stretchyman-diffuse-pma.atlas.txt" />
+     <None Include="Assets\Animations\Monster_02\Front Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\CustomMaterials\SkeletonRendererCustomMaterials.txt" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Hero\license.txt" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Raptor\raptor.atlas.txt" />
@@ -182,18 +186,23 @@
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Spineunitygirl\Doi.atlas.txt" />
      <None Include="Assets\Animations\Monster_01\Side Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Hero\hero-mesh.atlas.txt" />
+     <None Include="Assets\Animations\Monster_02\Side Json\skeleton.atlas.txt" />
+     <None Include="Assets\Animations\Monster_02\Back Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Dragon\license.txt" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpriteDepthNormalsTexture.shader" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpritesPixelLit.shader" />
-     <None Include="Assets\Animations\spineboy\spineboy.atlas.txt" />
      <None Include="Assets\Animations\Monster_01\Back Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\Examples\Spine\Gauge\Gauge.atlas.txt" />
      <None Include="Assets\Distort.shader" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\SkeletonRenderSeparator\SkeletonRenderSeparator.txt" />
+     <None Include="Assets\Animations\Monster_03\Side Json\skeleton.atlas.txt" />
      <None Include="Assets\Animations\Baba\Side Json\skeleton.atlas.txt" />
      <None Include="Assets\Animations\Baba\Front Json\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Shaders\Sprite\SpriteUnlit.cginc" />
      <None Include="Assets\spine-unity\Assets\spine-unity\Modules\Ghost\Shaders\SkeletonGhost.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -208,6 +217,9 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>

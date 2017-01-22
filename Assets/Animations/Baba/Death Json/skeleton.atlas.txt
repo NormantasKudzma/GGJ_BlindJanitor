@@ -1,0 +1,110 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/01
+  rotate: false
+  xy: 725, 12
+  size: 97, 61
+  orig: 97, 61
+  offset: 0, 0
+  index: -1
+images/03
+  rotate: false
+  xy: 538, 13
+  size: 185, 145
+  orig: 185, 145
+  offset: 0, 0
+  index: -1
+images/04
+  rotate: true
+  xy: 663, 172
+  size: 224, 121
+  orig: 224, 121
+  offset: 0, 0
+  index: -1
+images/05
+  rotate: false
+  xy: 725, 75
+  size: 258, 95
+  orig: 258, 95
+  offset: 0, 0
+  index: -1
+images/Arm
+  rotate: false
+  xy: 786, 198
+  size: 214, 198
+  orig: 214, 198
+  offset: 0, 0
+  index: -1
+images/Body
+  rotate: true
+  xy: 669, 609
+  size: 408, 348
+  orig: 413, 348
+  offset: 5, 0
+  index: -1
+images/Brow
+  rotate: true
+  xy: 2, 2
+  size: 156, 100
+  orig: 156, 100
+  offset: 0, 0
+  index: -1
+images/Head
+  rotate: false
+  xy: 2, 160
+  size: 659, 594
+  orig: 659, 594
+  offset: 0, 0
+  index: -1
+images/Leg
+  rotate: false
+  xy: 104, 11
+  size: 117, 147
+  orig: 117, 147
+  offset: 0, 0
+  index: -1
+images/Shadow
+  rotate: false
+  xy: 2, 756
+  size: 665, 261
+  orig: 675, 274
+  offset: 5, 6
+  index: -1
+images/Stick
+  rotate: true
+  xy: 663, 398
+  size: 209, 336
+  orig: 209, 336
+  offset: 0, 0
+  index: -1
+images/StickTop
+  rotate: true
+  xy: 223, 13
+  size: 145, 313
+  orig: 209, 336
+  offset: 64, 0
+  index: -1
+
+skeleton2.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/02
+  rotate: false
+  xy: 2, 2
+  size: 133, 109
+  orig: 133, 109
+  offset: 0, 0
+  index: -1
+images/Eyes
+  rotate: false
+  xy: 2, 113
+  size: 316, 138
+  orig: 316, 138
+  offset: 0, 0
+  index: -1

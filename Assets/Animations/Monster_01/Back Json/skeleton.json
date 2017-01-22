@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "K5jmXAhtLwCNH427o2Gzvtl2bg0", "spine": "3.5.46", "width": 644, "height": 1019.45, "images": "" },
+"skeleton": { "hash": "W+CRfgYjsvISOThQog12PFhtlV0", "spine": "3.5.46", "width": 675, "height": 1152.98, "images": "" },
 "bones": [
 	{ "name": "root", "y": 300 },
 	{ "name": "Base", "parent": "root", "x": 2, "y": -205, "color": "1c9b00ff" },
@@ -7,10 +7,12 @@
 	{ "name": "Head", "parent": "Torso", "length": 308.63, "rotation": 0.54, "x": 208.67 },
 	{ "name": "RArm", "parent": "Torso", "length": 151.86, "rotation": -136.66, "x": 192.72, "y": -127.49 },
 	{ "name": "Rleg", "parent": "Base", "length": 72.07, "rotation": -87.04, "x": 74.82, "y": 29.1 },
+	{ "name": "Shadow", "parent": "root", "y": -300 },
 	{ "name": "bone", "parent": "Torso", "length": 129.35, "rotation": 127.81, "x": 185.07, "y": 148.03 },
 	{ "name": "bone2", "parent": "Base", "length": 103.97, "rotation": -89.03, "x": -99.54, "y": 29.23, "color": "1c9b00ff" }
 ],
 "slots": [
+	{ "name": "images/Shadow", "bone": "Shadow", "attachment": "images/Shadow" },
 	{ "name": "images/Leg", "bone": "Rleg", "attachment": "images/Leg" },
 	{ "name": "images/Leg2", "bone": "bone2", "attachment": "images/Leg" },
 	{ "name": "images/Arm2", "bone": "bone", "attachment": "images/Arm" },
@@ -37,6 +39,9 @@
 		},
 		"images/Leg2": {
 			"images/Leg": { "x": 54.32, "y": 7.05, "scaleX": -1, "rotation": 89.03, "width": 100, "height": 147 }
+		},
+		"images/Shadow": {
+			"images/Shadow": { "color": "ffffffa0", "width": 675, "height": 274 }
 		}
 	}
 },
