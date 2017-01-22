@@ -27,6 +27,7 @@ public class AnimationHelper : MonoBehaviour
 	Transform m_Parent;
 
 	SkeletonDataAsset[] m_SkeletonArray;
+	int oldDir = 0;
 
 	void Start()
 	{
@@ -85,9 +86,10 @@ public class AnimationHelper : MonoBehaviour
 		}
 
 		int dir = (Mathf.RoundToInt((angle - 45.0f) / 90.0f)) % 4;
+
 		//Debug.Log ("Angle -> " + angle + " = " + dir);
 
-		if (m_SkeletonArray[dir] != m_CurrentAsset) {
+		if (dir != oldDir) {
 			SetSkeleton(m_SkeletonArray[dir]);
 
 			if (dir == 0) {
@@ -100,6 +102,8 @@ public class AnimationHelper : MonoBehaviour
 				transform.localScale = scale;
 			}
 		}
+
+		oldDir = dir;
 	}
 
 	public void SetSkeleton(SkeletonDataAsset skel)
